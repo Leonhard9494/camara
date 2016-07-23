@@ -10,13 +10,14 @@
 <script type="text/javascript">
 document.addEventListener("deviceready",function(){
 	$("#btnTomarFoto").tap(function (){//Capturar fotografia
-	        navigator.device.capture.captureImage(function(mediaFiles){
-			    path = mediaFiles[0].fullPath;
-			    $('#regFoto').append('<br><img id="imagen" src="'+path+'" width="100%" />').attr('rel',path);
-		      },function(error){
-			        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
-		      },{limit:1});
-	  });
+       alert("Listo");
+        navigator.device.capture.captureImage(function(mediaFiles){
+		    path = mediaFiles[0].fullPath;
+		    $('#regFoto').append('<br><img id="imagen" src="'+path+'" width="100%" />').attr('rel',path);
+	      },function(error){
+		        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+	      },{limit:1});
+  });
 	},false);
 </script>
 <style type="text/css">
